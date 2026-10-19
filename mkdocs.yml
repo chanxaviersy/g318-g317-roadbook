@@ -1,0 +1,129 @@
+site_name: G318/G317 川藏大环线电子路书
+site_description: 理想L9 Livis 成都↔拉萨 30天 8800公里 · G318进G317出
+site_author: 理想L9 Livis 自驾旅行
+site_url: https://cursor.com/codebase/soengyuchan/g318-g317-roadbook
+
+repo_name: g318-g317-roadbook
+repo_url: https://origin.cursor.com/git/soengyuchan/g318-g317-roadbook.git
+edit_uri: ""
+
+copyright: Copyright &copy; 2026 G318/G317 Roadbook
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 切换到浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 切换到系统默认
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/roadbook.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+
+nav:
+  - 首页: index.md
+  - 行程总览: overview.md
+  - 行前准备: preparation.md
+  - 路线与道路编号: routes.md
+  - 充电站网络: charging.md
+  - 高反与健康: health.md
+  - 第一阶段·南行入川: stage-1-south.md
+  - 第二阶段·G318川藏南线: stage-2-g318.md
+  - 第三阶段·拉萨与延伸: stage-3-lhasa.md
+  - 第四阶段·G317川藏北线: stage-4-g317.md
+  - 第五阶段·凯旋东归: stage-5-return.md
+  - 应急与救援: emergency.md
+  - 装备清单: gear.md
+  - 关于: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://origin.cursor.com/git/soengyuchan/g318-g317-roadbook
+      name: GitHub Repository
+  generator: false

@@ -1,0 +1,311 @@
+/* ============================================
+   G318/G317 川藏大环线电子路书 - 主题样式
+   ============================================ */
+
+/* ---------- 全局变量 ---------- */
+:root {
+  --road-primary: #00897b;
+  --road-secondary: #f57c00;
+  --road-success: #43a047;
+  --road-warning: #fb8c00;
+  --road-danger: #e53935;
+  --road-info: #1e88e5;
+  --road-snow: #ffffff;
+  --road-stone: #f5f5f5;
+  --road-shadow: rgba(0, 0, 0, 0.1);
+  --road-radius: 12px;
+}
+
+/* ---------- 暗色模式调整 ---------- */
+[data-md-color-scheme="slate"] {
+  --road-stone: #2b2b2b;
+  --road-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- 道路编号徽章 ---------- */
+.road-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 0 4px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 0.85em;
+  color: white;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px var(--road-shadow);
+  text-decoration: none;
+}
+
+.road-badge-g1  { background: linear-gradient(135deg, #d32f2f, #f44336); }  /* 国道 */
+.road-badge-g3  { background: linear-gradient(135deg, #c62828, #e53935); }
+.road-badge-g5  { background: linear-gradient(135deg, #1565c0, #1976d2); }  /* G318 蓝 */
+.road-badge-g318 { background: linear-gradient(135deg, #1565c0, #42a5f5); }
+.road-badge-g317 { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }  /* G317 紫 */
+.road-badge-g227 { background: linear-gradient(135deg, #2e7d32, #66bb6a); }
+.road-badge-g109 { background: linear-gradient(135deg, #ef6c00, #ffa726); }
+.road-badge-g349 { background: linear-gradient(135deg, #5d4037, #8d6e63); }
+
+.road-badge-gh  { background: linear-gradient(135deg, #00838f, #00acc1); }  /* 高速 */
+.road-badge-g4  { background: linear-gradient(135deg, #283593, #3949ab); }
+.road-badge-g55 { background: linear-gradient(135deg, #00695c, #00897b); }
+.road-badge-g65 { background: linear-gradient(135deg, #4527a0, #5e35b1); }
+.road-badge-g75 { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+.road-badge-g76 { background: linear-gradient(135deg, #bf360c, #e64a19); }
+.road-badge-g93 { background: linear-gradient(135deg: #4e342e, #6d4c41); }
+.road-badge-g4215 { background: linear-gradient(135deg, #37474f, #546e7a); }
+.road-badge-g4218 { background: linear-gradient(135deg, #1a237e, #283593); }
+.road-badge-g5513 { background: linear-gradient(135deg, #827717, #9e9d24); }
+
+/* ---------- 充电站徽章 ---------- */
+.charge-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  margin: 0 3px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.charge-5c {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffb74d;
+}
+
+.charge-fast {
+  background: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #64b5f6;
+}
+
+.charge-normal {
+  background: #f3e5f5;
+  color: #4a148c;
+  border: 1px solid #ba68c8;
+}
+
+[data-md-color-scheme="slate"] .charge-5c {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+}
+[data-md-color-scheme="slate"] .charge-fast {
+  background: rgba(33, 150, 243, 0.15);
+  color: #64b5f6;
+}
+[data-md-color-scheme="slate"] .charge-normal {
+  background: rgba(156, 39, 176, 0.15);
+  color: #ce93d8;
+}
+
+/* ---------- 海拔标签 ---------- */
+.altitude {
+  display: inline-block;
+  padding: 1px 6px;
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.78em;
+  font-weight: 600;
+}
+
+.altitude-low   { background: linear-gradient(135deg, #2e7d32, #43a047); }
+.altitude-mid   { background: linear-gradient(135deg, #ef6c00, #fb8c00); }
+.altitude-high  { background: linear-gradient(135deg, #c62828, #e53935); }
+.altitude-extreme { background: linear-gradient(135deg, #b71c1c, #d32f2f); animation: pulse 2s infinite; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ---------- 行程卡片 ---------- */
+.day-card {
+  border-left: 4px solid var(--road-primary);
+  background: var(--road-stone);
+  padding: 16px 20px;
+  margin: 16px 0;
+  border-radius: var(--road-radius);
+  box-shadow: 0 2px 8px var(--road-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--road-shadow);
+}
+
+.day-card h3 {
+  margin-top: 0;
+  color: var(--road-primary);
+}
+
+/* ---------- 阶段标识 ---------- */
+.stage-header {
+  background: linear-gradient(135deg, var(--road-primary), #00acc1);
+  color: white;
+  padding: 32px 24px;
+  border-radius: var(--road-radius);
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--road-shadow);
+}
+
+.stage-header h1 {
+  color: white !important;
+  margin: 0;
+}
+
+.stage-header p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 8px;
+}
+
+/* ---------- 信息统计条 ---------- */
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.stat-item {
+  background: var(--road-stone);
+  padding: 16px;
+  border-radius: var(--road-radius);
+  text-align: center;
+  box-shadow: 0 2px 6px var(--road-shadow);
+  border-top: 3px solid var(--road-primary);
+}
+
+.stat-value {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--road-primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 4px;
+}
+
+[data-md-color-scheme="slate"] .stat-label {
+  color: #aaa;
+}
+
+/* ---------- 时间轴 ---------- */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--road-primary), var(--road-secondary));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: var(--road-stone);
+  border-radius: var(--road-radius);
+  box-shadow: 0 2px 6px var(--road-shadow);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--road-secondary);
+  border: 3px solid var(--md-default-bg-color);
+  box-shadow: 0 0 0 2px var(--road-secondary);
+}
+
+/* ---------- 提示框增强 ---------- */
+.md-typeset .admonition {
+  border-radius: var(--road-radius);
+}
+
+.md-typeset .admonition.high-altitude {
+  border-color: #c62828;
+}
+
+.md-typeset .admonition.high-altitude > .admonition-title {
+  background-color: rgba(198, 40, 40, 0.1);
+}
+
+.md-typeset .admonition.high-altitude > .admonition-title::before {
+  content: "⚠️";
+}
+
+/* ---------- 表格美化 ---------- */
+.md-typeset table:not([class]) {
+  font-size: 0.85em;
+  border-radius: var(--road-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--road-shadow);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--road-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background: rgba(0, 137, 123, 0.04);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ---------- 响应式调整 ---------- */
+@media (max-width: 768px) {
+  .stat-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .day-card {
+    padding: 12px 14px;
+  }
+}
+
+/* ---------- 代码块美化 ---------- */
+.md-typeset code {
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.85em;
+}
+
+/* ---------- 任务清单样式 ---------- */
+.md-typeset .task-list-item input[type="checkbox"]:checked + .task-list-indicator::before {
+  background: var(--road-success);
+}
+
+/* ---------- 章节序号 ---------- */
+h2::before {
+  content: "▎";
+  color: var(--road-primary);
+  margin-right: 8px;
+  font-weight: 900;
+}
+
+h3::before {
+  content: "▸";
+  color: var(--road-secondary);
+  margin-right: 6px;
+}
