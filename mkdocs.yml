@@ -1,10 +1,10 @@
 site_name: G318/G317 川藏大环线电子路书
 site_description: 理想L9 Livis 成都↔拉萨 30天 8800公里 · G318进G317出
 site_author: 理想L9 Livis 自驾旅行
-site_url: https://cursor.com/codebase/soengyuchan/g318-g317-roadbook
+site_url: https://chanxaviersy.github.io/g318-g317-roadbook
 
 repo_name: g318-g317-roadbook
-repo_url: https://origin.cursor.com/git/soengyuchan/g318-g317-roadbook.git
+repo_url: https://github.com/chanxaviersy/g318-g317-roadbook
 edit_uri: ""
 
 copyright: Copyright &copy; 2026 G318/G317 Roadbook

@@ -14,6 +14,17 @@ hide:
 
 ---
 
+## 🌐 在线访问
+
+<div class="stat-bar" style="margin-bottom: 32px;">
+<a href="https://chanxaviersy.github.io/g318-g317-roadbook/" target="_blank" class="stat-item" style="background: linear-gradient(135deg, #1e88e5, #1565c0); color: white; text-decoration: none; padding: 20px 32px; border-radius: 12px; box-shadow: 0 4px 12px rgba(30,136,229,0.3); transition: transform 0.2s; display: inline-block;">
+<div class="stat-value" style="color: white;">🔗 Live Site</div>
+<div class="stat-label" style="color: white; opacity: 0.95;">chanxaviersy.github.io/g318-g317-roadbook</div>
+</a>
+</div>
+
+---
+
 ## 📊 行程总览
 
 <div class="stat-bar">
